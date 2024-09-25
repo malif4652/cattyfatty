@@ -54,6 +54,8 @@ p{
 a{
     text-decoration: none;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .container{
@@ -65,10 +67,17 @@ button{
     padding: 16px 20px;
     border: 2px solid #333;
     cursor: pointer;
+    font-family: 'Roboto condensed';
+    font-size: 18px;
 }
 
 .primary-button{
     background-color: #ffaa4d;
+    transition: all 0.2s ease-in-out;
+}
+
+.primary-button:hover{
+    box-shadow: 5px 5px 0px #333;
 }
 
 .secondary-button{
@@ -102,7 +111,7 @@ button{
 
 .header h2 a{
     position: relative;
-    padding: 8px;
+    padding-bottom: 8px;
 }
 
 .header h2 a::before{
@@ -168,6 +177,7 @@ button{
 .hero .buttons{
     display: flex;
     gap: 20px;
+    padding-top: 20px;
 }
 
 .hero .buttons button{
@@ -221,8 +231,7 @@ button{
     display: flex;
     gap: 40px;
     scrollbar-width: 0;
-    padding-right: 5px;
-    padding-bottom: 5px;
+    padding: 20px 5px 5px 0;
 }
 
 
@@ -287,6 +296,67 @@ button{
 
 
 
+.newsletter .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 350px;
+}
+
+.newsletter form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.newsletter .email{
+    width: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.newsletter .primary-button{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+.footer{
+    background-color: #333;
+    color: white;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+}
+
+.footer .icons img{
+    width: 28px;
+    color: white;
+}
+
+
+.footer .links a{
+    color: white;
+}
+
+.footer .details{
+    width: 40%;
+}
+
+.footer .links{
+    display: flex;
+    flex-direction: column;
+}
 
 /* responsive */
 
