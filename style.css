@@ -1,0 +1,332 @@
+/* utilities */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto condensed';
+    font-weight: 400;
+    color: #333;
+    background: #f5e6cc;
+}
+
+h1{
+    font-size: 48px;
+    padding: 10px 0;
+}
+
+h2{
+    font-size: 38px;
+    padding: 10px 0;
+}
+
+h3{
+    font-size: 32px;
+    padding: 10px 0;
+}
+
+h4{
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+h5{
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+p{
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+button{
+    padding: 16px 20px;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.primary-button{
+    background-color: #ffaa4d;
+}
+
+.secondary-button{
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.secondary-button:hover{
+    background-color: #ffaa4d;
+}
+
+
+
+/* custom */
+
+.header header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+/* .header img{
+    width: 5%;
+}
+
+.header .logo{
+    display: flex;
+    gap: 10px;
+} */
+
+.header h2 a{
+    position: relative;
+    padding: 8px;
+}
+
+.header h2 a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.header h2 a:hover::before{
+    width: 100%;
+    border-color: #333;
+}
+
+
+
+
+
+
+
+
+.nav a{
+    position: relative;
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+
+.nav a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav a:hover::before{
+    width: 100%;
+    border-color: #333;
+}
+
+
+
+
+
+
+.hero .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.hero .content h1, .hero .content h4{
+    text-align: center;
+}
+
+.hero .buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.hero .buttons button{
+    cursor: pointer;
+}
+
+
+
+
+
+.featured-stories img{
+    width: 100%;
+}
+
+.featured-stories .container{
+    display: flex;
+    gap: 40px;
+}
+
+.featured-stories .image{
+    width: 50%;
+}
+
+.featured-stories .content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.featured-stories .content h3{
+    font-weight: 500;
+}
+
+
+
+
+
+
+.browse-by-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 450px;
+}
+
+
+.browse-by-category .cards{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 40px;
+    scrollbar-width: 0;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+
+.browse-by-category .cards::-webkit-scrollbar{
+    display: none;
+}
+
+.browse-by-category .card h3{
+    text-align: center;
+}
+
+.browse-by-category .card p{
+    text-align: justify;
+}
+
+.browse-by-category .card{
+    min-width: 250px;
+    padding: 20px;
+    border: 2px solid #333;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.browse-by-category .card:hover{
+    box-shadow: 5px 5px 0px black !important;
+    background-color: #ffaa4d;
+
+}
+
+
+
+
+.cat-of-the-month{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: justify;
+}
+
+.cat-of-the-month .container{
+    display: flex;
+    gap: 40px;
+
+} 
+
+.cat-of-the-month .image{
+    width: 40%;
+}
+
+.cat-of-the-month .content{
+    width: 60%;
+}
+
+.cat-of-the-month img{
+    width: 100%;   
+    border: 2px solid #333; 
+}
+
+
+
+
+
+/* responsive */
+
+
+@media (max-width: 767px) {
+
+    .container{
+        width: 100%;
+    }    
+
+    body{
+        padding: 10px;
+    }
+
+    .featured-stories .container{
+        flex-direction: column;
+    }
+    
+    .featured-stories .image{
+        width: 100%;
+    }
+    
+    .featured-stories .content{
+        width: 100%;
+    }
+
+
+    .cat-of-the-month{
+        height: 600px;
+    }
+
+    .cat-of-the-month .container{
+        flex-direction: column;
+    }
+
+    .cat-of-the-month .image{
+        width: 100%;
+    }
+    
+    .cat-of-the-month .content{
+        width: 100%;
+    }
+}
