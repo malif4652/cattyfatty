@@ -210,6 +210,7 @@ button{
 
 .featured-stories .content h3{
     font-weight: 500;
+    font-size: 30px;
 }
 
 
@@ -363,13 +364,14 @@ button{
 
 @media (max-width: 767px) {
 
-    .container{
+    html, body{
         width: 100%;
-    }    
-
-    body{
-        padding: 10px;
     }
+
+    .container{
+        width: calc(100% - 40px);
+        padding: 20px;
+    }    
 
     .featured-stories .container{
         flex-direction: column;
@@ -398,5 +400,32 @@ button{
     
     .cat-of-the-month .content{
         width: 100%;
+    }
+
+    .footer .container{
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .footer .details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .footer .links{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .icons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
