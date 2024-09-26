@@ -343,6 +343,11 @@ button{
 .footer .icons img{
     width: 28px;
     color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer .icons img:hover{
+    transform: scale(1.2);
 }
 
 
